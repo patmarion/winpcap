@@ -45,3 +45,13 @@ In wpcap/libpcap/pcap-int.h search for HAVE_SNPRINTF and modify the code to look
 #endif
 
 
+Resource file
+=============
+
+If there is a compile error for missing header "afxres.h" it might be because
+you are using an Express version of Visual Studio or don't have the Windows SDK
+installed.  You can replace afxres.h with windws.h:
+
+    -#include "afxres.h"
+    +#include "windows.h"
+

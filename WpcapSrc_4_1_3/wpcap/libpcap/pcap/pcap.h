@@ -337,6 +337,8 @@ int	pcap_minor_version(pcap_t *);
 FILE	*pcap_file(pcap_t *);
 int	pcap_fileno(pcap_t *);
 
+int pcap_fgetpos(pcap_t *, fpos_t *);int pcap_fsetpos(pcap_t *, fpos_t *);
+
 pcap_dumper_t *pcap_dump_open(pcap_t *, const char *);
 pcap_dumper_t *pcap_dump_fopen(pcap_t *, FILE *fp);
 FILE	*pcap_dump_file(pcap_dumper_t *);

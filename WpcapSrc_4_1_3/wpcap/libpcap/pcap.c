@@ -852,6 +852,13 @@ pcap_get_selectable_fd(pcap_t *p)
 }
 #endif
 
+
+int pcap_fgetpos(pcap_t *p, fpos_t *pos){  return fgetpos(p->sf.rfile, pos);}int pcap_fsetpos(pcap_t *p, fpos_t *pos)
+{
+  return fsetpos(p->sf.rfile, pos);
+}
+
+
 void
 pcap_perror(pcap_t *p, char *prefix)
 {

@@ -30,6 +30,8 @@ EXPORTS
 		pcap_minor_version
 		pcap_file
 		pcap_fileno
+		pcap_fgetpos
+		pcap_fsetpos
 		pcap_dump_open
 		pcap_dump_close
 		pcap_dump_flush

@@ -456,8 +456,9 @@ int	pcap_read(pcap_t *, int cnt, pcap_handler, u_char *);
 #include <stdarg.h>
 
 #if !defined(HAVE_SNPRINTF)
-#define snprintf pcap_snprintf
-extern int snprintf (char *, size_t, const char *, ...);
+#define snprintf _snprintf
+//#define snprintf pcap_snprintf
+//extern int snprintf (char *, size_t, const char *, ...);
 #endif
 
 #if !defined(HAVE_VSNPRINTF)
